@@ -13,3 +13,7 @@ The canny edge detection is a effective traditional method used for edge detecti
 
 5. Edge Tracking by Hysteresis: Finally, weak edges are retained only if they are connected to strong edges. This step helps filter out noise and connects broken edge segments.
 
+The working architecture can be shown in the video : 
+
+[![Video](https://img.youtube.com/vi/https://youtube.com/shorts/_Ix6b2beu2g/maxresdefault.jpg)](https://www.youtube.com/watch?v=https://youtube.com/shorts/_Ix6b2beu2g)
+
