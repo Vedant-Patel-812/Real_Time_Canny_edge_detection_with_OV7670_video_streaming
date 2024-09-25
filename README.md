@@ -3,15 +3,15 @@
 
 The Canny edge detection algorithm is a widely used and highly effective method for detecting edges in images. The steps involved are as follows:
 
-Noise Reduction: To reduce noise and false edges, a Gaussian filter is used to smooth the image. This step ensures that small-scale variations due to noise are minimized, while the major edges remain intact.
+1. Noise Reduction: To reduce noise and false edges, a Gaussian filter is used to smooth the image. This step ensures that small-scale variations due to noise are minimized, while the major edges remain intact.
 
-Gradient Calculation: After smoothing, the image's intensity gradient is computed using the Sobel operator. This identifies areas with sharp intensity changes, which are potential edges. The gradient magnitude and direction are calculated for each pixel.
+2. Gradient Calculation: After smoothing, the image's intensity gradient is computed using the Sobel operator. This identifies areas with sharp intensity changes, which are potential edges. The gradient magnitude and direction are calculated for each pixel.
 
-Non-Maximum Suppression: The gradient values that are not local maxima are suppressed to refine the edge detection. This step ensures that the edges are thin and well-defined.
+3. Non-Maximum Suppression: The gradient values that are not local maxima are suppressed to refine the edge detection. This step ensures that the edges are thin and well-defined.
 
-Double Thresholding: Two thresholds (high and low) are applied to classify pixels as strong or weak edges. Strong edges are retained, while weak edges are further analyzed.
+4. Double Thresholding: Two thresholds (high and low) are applied to classify pixels as strong or weak edges. Strong edges are retained, while weak edges are further analyzed.
 
-Edge Tracking by Hysteresis: Weak edges are kept only if they are connected to strong edges, ensuring continuity in the detected edges.
+5. Edge Tracking by Hysteresis: Weak edges are kept only if they are connected to strong edges, ensuring continuity in the detected edges.
 
 Implementation on FPGA
 The Nexys-A7 FPGA was chosen for its flexibility and resource availability. Here’s how the algorithm was implemented:
