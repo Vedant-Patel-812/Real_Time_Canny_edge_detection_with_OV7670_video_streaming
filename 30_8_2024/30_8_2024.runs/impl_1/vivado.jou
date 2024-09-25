@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sun Sep  1 19:48:24 2024
+# Process ID: 17020
+# Current directory: C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1
+# Command line: vivado.exe -log OV7670_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source OV7670_top.tcl -notrace
+# Log file: C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.vdi
+# Journal file: C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1\vivado.jou
+# Running On        :You-Know-Nothing
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :AMD Ryzen 5 5500U with Radeon Graphics         
+# CPU Frequency     :2096 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :6280 MB
+# Swap memory       :11274 MB
+# Total Virtual     :17554 MB
+# Available Virtual :6057 MB
+#-----------------------------------------------------------
+source OV7670_top.tcl -notrace

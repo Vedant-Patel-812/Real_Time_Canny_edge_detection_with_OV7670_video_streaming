@@ -1,0 +1,219 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sat Aug 31 11:25:27 2024
+# Process ID: 17220
+# Current directory: C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9700 C:\Users\patel\Desktop\--\sem7\internship\ankur sir\30_8_2024\30_8_2024.xpr
+# Log file: C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/vivado.log
+# Journal file: C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024\vivado.jou
+# Running On        :You-Know-Nothing
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :AMD Ryzen 5 5500U with Radeon Graphics         
+# CPU Frequency     :2096 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :6280 MB
+# Swap memory       :10200 MB
+# Total Virtual     :16480 MB
+# Available Virtual :6305 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.xpr}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_run impl_1
+open_run synth_1 -name synth_1
+current_design impl_1
+report_methodology -name ultrafast_methodology_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw_manager
+create_ip -name ila -vendor xilinx.com -library ip -version 6.2 -module_name ila_0
+set_property -dict [list \
+  CONFIG.C_DATA_DEPTH {32768} \
+  CONFIG.C_NUM_OF_PROBES {2} \
+  CONFIG.C_PROBE1_WIDTH {8} \
+] [get_ips ila_0]
+generate_target {instantiation_template} [get_files {{c:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.srcs/sources_1/ip/ila_0/ila_0.xci}}]
+update_compile_order -fileset sources_1
+generate_target all [get_files  {{c:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.srcs/sources_1/ip/ila_0/ila_0.xci}}]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+close_design
+close_design
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]]
+save_wave_config {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw_manager
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]]
+set_property PROBES.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]]
+set_property PROBES.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]]
+set_property PROBES.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]]
+close_hw_manager
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw_manager
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"inst1"}]]
+set_property PROBES.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/reff/OV7670_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+save_wave_config {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw_manager
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+set_property is_enabled false [get_files  {{c:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.srcs/sources_1/ip/ila_0/ila_0.xci}}]
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/reff/OV7670_top.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/reff/OV7670_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/patel/Desktop/--/sem7/internship/ankur sir/30_8_2024/30_8_2024.runs/impl_1/OV7670_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw_manager

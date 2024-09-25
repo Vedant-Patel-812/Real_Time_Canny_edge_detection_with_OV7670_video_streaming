@@ -1,0 +1,1 @@
+--incr --debug typical --relax --mt 2  -L xpm -L blk_mem_gen_v8_4_8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot OV7670_top xil_defaultlib.OV7670_top xil_defaultlib.glbl -log elaborate.log

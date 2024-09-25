@@ -1,0 +1,106 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Sun Sep  1 19:45:57 2024
+| Host         : You-Know-Nothing running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file OV7670_top_control_sets_placed.rpt
+| Design       : OV7670_top
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    28 |
+|    Minimum number of control sets                        |    28 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   121 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    28 |
+| >= 0 to < 4        |     6 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     3 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    11 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             328 |          167 |
+| No           | No                    | Yes                    |              25 |           10 |
+| No           | Yes                   | No                     |             913 |          221 |
+| Yes          | No                    | No                     |              64 |           17 |
+| Yes          | No                    | Yes                    |              20 |            9 |
+| Yes          | Yes                   | No                     |             129 |           34 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+-------------------------------------------+--------------------------------------+------------------+----------------+--------------+
+|      Clock Signal     |               Enable Signal               |           Set/Reset Signal           | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------+-------------------------------------------+--------------------------------------+------------------+----------------+--------------+
+|  sys_clk_IBUF_BUFG    |                                           |                                      |                1 |              1 |         1.00 |
+|  sys_clk_IBUF_BUFG    | u_ov7670_init/u_I2C_Controller/i2c_negclk | edge_det/sobel_1/x1/SR[0]            |                1 |              1 |         1.00 |
+|  plzz/inst/clk_out_25 |                                           | u_vga/vga_hsync0                     |                1 |              1 |         1.00 |
+|  plzz/inst/clk_out_25 |                                           | u_vga/vga_vsync0                     |                1 |              1 |         1.00 |
+|  plzz/inst/clk_out_25 | u_vga/hCounter[9]_i_1_n_0                 | u_vga/vCounter[9]_i_1_n_0            |                1 |              2 |         2.00 |
+|  led_pin_OBUF_BUFG[1] |                                           |                                      |                2 |              3 |         1.50 |
+|  led_pin_OBUF_BUFG[1] | u_ov7670_capture/address[16]_i_1_n_0      | led_pin_OBUF[2]                      |                1 |              4 |         4.00 |
+|  sys_clk_IBUF_BUFG    | u_ov7670_init/u_I2C_Controller/E[0]       | edge_det/sobel_1/x1/SR[0]            |                2 |              5 |         2.50 |
+|  led_pin_OBUF_BUFG[1] | u_ov7670_capture/dout[10]_i_1_n_0         |                                      |                1 |              6 |         6.00 |
+|  sys_clk_IBUF_BUFG    | u_ov7670_init/u_I2C_Controller/SD_COUNTER | edge_det/sobel_1/x1/SR[0]            |                3 |              6 |         2.00 |
+|  plzz/inst/clk_out_25 | u_vga/hCounter[9]_i_1_n_0                 |                                      |                3 |              7 |         2.33 |
+|  sys_clk_IBUF_BUFG    | u_ov7670_init/LUT_INDEX[0]_i_1_n_0        | edge_det/sobel_1/x1/SR[0]            |                3 |              8 |         2.67 |
+|  led_pin_OBUF_BUFG[1] | u_ov7670_capture/d_latch[10]_i_1_n_0      |                                      |                3 |             10 |         3.33 |
+|  plzz/inst/clk_out_25 |                                           | u_vga/hCounter[9]_i_1_n_0            |                3 |             10 |         3.33 |
+|  plzz/inst/clk_out_25 |                                           | u_vga/blank                          |                6 |             12 |         2.00 |
+|  led_pin_OBUF_BUFG[1] | u_ov7670_capture/p_0_in                   | u_ov7670_capture/address[15]_i_1_n_0 |                5 |             13 |         2.60 |
+|  plzz/inst/clk_out_25 |                                           |                                      |                6 |             13 |         2.17 |
+|  sys_clk_IBUF_BUFG    | reset[0]_i_1_n_0                          | sys_rst_n_pin_IBUF                   |                4 |             16 |         4.00 |
+|  wr_BUFG              | edge_det/toggle                           | edge_det/cnt[0]_i_1_n_0              |                5 |             17 |         3.40 |
+|  plzz/inst/clk_out_25 | u_vga/sel                                 | u_vga/clear                          |                5 |             17 |         3.40 |
+|  wr_BUFG              |                                           | edge_det/cnt[0]_i_1_n_0              |                5 |             20 |         4.00 |
+|  wr_BUFG              | edge_det/sobel_1/y1/en_th_reg[0]          | edge_det/sobel_1/x1/SR[0]            |                6 |             20 |         3.33 |
+|  wr_BUFG              | edge_det/en_th_reg_n_0                    | u_ov7670_capture/new_frame           |                3 |             20 |         6.67 |
+|  wr_BUFG              | edge_det/toggle                           | u_ov7670_capture/new_frame           |                4 |             20 |         5.00 |
+|  sys_clk_IBUF_BUFG    |                                           | edge_det/sobel_1/x1/SR[0]            |               10 |             25 |         2.50 |
+|  wr_BUFG              | rst                                       |                                      |               10 |             41 |         4.10 |
+|  wr_BUFG              |                                           | edge_det/sobel_1/x1/SR[0]            |              205 |            869 |         4.24 |
+|  wr_BUFG              |                                           |                                      |              336 |           1202 |         3.58 |
++-----------------------+-------------------------------------------+--------------------------------------+------------------+----------------+--------------+
+
+
