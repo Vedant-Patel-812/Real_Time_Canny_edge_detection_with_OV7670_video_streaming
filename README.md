@@ -15,5 +15,5 @@ The canny edge detection is a effective traditional method used for edge detecti
 
 The working architecture can be shown in the video : 
 
-[![Video](https://img.youtube.com/vi/https://youtube.com/shorts/_Ix6b2beu2g/maxresdefault.jpg)](https://www.youtube.com/watch?v=https://youtube.com/shorts/_Ix6b2beu2g)
+[![Video](https://img.youtube.com/vi/_Ix6b2beu2g/maxresdefault.jpg)](https://www.youtube.com/watch?v=_Ix6b2beu2g)
 
